@@ -6,8 +6,8 @@ const axios = require('axios');
 const server = http.createServer();
 const io = socket(server);
 
-const apiKey = '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';  
-const url = 'https://api-inference.huggingface.co/models/google/gemma-2b';
+const apiKey = '{apikey}';  
+const url = 'api-inference.huggingface.co';
 
 
 async function apiCall(prompt) {
@@ -17,7 +17,7 @@ async function apiCall(prompt) {
             { inputs: prompt },
             {
                 headers: {
-                    Authorization: `Bearer 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`,
+                    Authorization: `Bearer {apikey}`,
                     'Content-Type': 'application/json',
                 },
             }
