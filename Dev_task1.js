@@ -1,8 +1,8 @@
 const fs = require('fs');
 const axios = require('axios');
 
-const url = 'https://api-inference.huggingface.co/models/google/gemma-2b';
-const apiKey = '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';  
+const url = 'endpoint';
+const apiKey = '{api key}';  
 
 // Function to make the API call
 async function apiCall(prompt) {
@@ -12,7 +12,7 @@ async function apiCall(prompt) {
             { inputs: prompt },
             {
                 headers: {
-                    Authorization: 'Bearer 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',
+                    Authorization: 'Bearer {api key}',
                     'Content-Type': 'application/json'
                 }
             }
